@@ -1,0 +1,125 @@
+.project{
+    &__btn-filter{
+        ul{
+            @include flex(center, center, row, wrap);
+            margin-top: 2rem;
+        .button{
+            color: $text-color;
+            font-size: 120%;
+            cursor: pointer;
+            margin: 0 2rem;
+            position: relative;
+            &:after{
+                @include size(100%, 4px);
+                @include posi-top-left(absolute,100%,0);
+                transition : (all ease-in-out 0.2s);
+                transform : scale(0);
+                content: "";
+                background: $main-color;
+                border-radius: 10px;
+            }
+            &:hover{
+                color: $main-color;
+                &:after{
+                    transform : scale(1);
+                }
+            }   
+                }
+        }
+        .active{
+            @extend .button:hover;
+        }
+        h1{
+            font-family: monts-thin;
+            color: $text-color;
+            font-size:300%;
+            margin: 2rem 0;
+        }
+    }
+    &__block{
+        .one-block-project{
+            @include size(50%, 400px);
+            transition: .5s all;
+            float: left;
+            overflow: hidden;
+            @include mobile{
+                width: 100%;
+                float: none;
+                
+            }
+            
+            .content-project{
+                @include size(100%, 100%);
+                transition: .5s all;
+                position: relative;
+                cursor: pointer;
+                 &:hover{
+                    transform : scale(1.2);
+                    .fa-heart{left: 30%;opacity: 1;visibility: visible}
+                    .fa-eye{right: 30%;opacity: 1;visibility: visible}
+                    .nenden-project{visibility: visible;opacity: 1}
+                }
+                .nenden-project{
+                    @include size(100%, 100%);
+                    @include posi-top-left(absolute, 0,0);
+                    transition: .5s all;
+                    z-index: 8;
+                    background: rgba(0,0,0,.7);
+                    cursor: pointer;
+                    visibility: hidden;
+                    opacity: 0;
+                    overflow: hidden;
+                }
+                a{
+                    transform : (translateY(-50%));
+                    @include size(50px, 50px);
+                    @include flex(center, center, row, nowrap);
+                    transition: .5s all;
+                    position: absolute;
+                    z-index: 9;
+                    top: 50%;
+                    border-radius: 50%;
+                    background: transparent;
+                    border: 2px solid $text-color;
+                    color: $text-color;
+                    font-size: 120%;
+                    opacity: 0;
+                    visibility: hidden;
+                    cursor: pointer;
+                    &:hover{
+                        background: $text-color;
+                        color: #000;
+                    }
+                }
+                .fa-heart{left: 10%;}
+                .fa-eye{right: 10%;}
+            }
+            &:nth-child(1) .content-project{
+                background: url(../images/temp-1.png) no-repeat top center;
+                background-size: cover;
+                animation-delay: .4s;
+            }
+            &:nth-child(2) .content-project{
+                background: url(../images/temp-2.png) no-repeat top center;
+                background-size: cover;
+                animation-delay: .8;
+            }
+            &:nth-child(3) .content-project{
+                background: url(../images/temp-3.png) no-repeat top center;
+                background-size: cover;
+                animation-delay: 1.2s;
+            }
+            &:nth-child(4) .content-project{
+                background: url(../images/pro-3.jpg) no-repeat top center;
+                background-size: cover;
+                animation-delay: 1.6;
+            }
+        }
+    }
+    .clear{clear: both}
+}
+
+// .one-block-project:nth-child(2){-webkit-animation-delay: 0.7s;animation-delay: 0.7s}
+// .one-block-project:nth-child(3){-webkit-animation-delay: 1s;animation-delay: 1s}
+// .one-block-project:nth-child(4){-webkit-animation-delay: 1.3s;animation-delay: 1.3s}
+

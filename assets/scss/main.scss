@@ -1,0 +1,18 @@
+@import "./helpers/variables";
+@import "./helpers/mixin";
+
+@import "./base/typography";
+@import "./base/reset";
+
+@import "./components/title";
+@import "./components/blockSection";
+@import "./components/animation";
+
+@import "./layout/header";
+@import "./layout/slider";
+@import "./layout/about";
+@import "./layout/skill";
+@import "./layout/project";
+@import "./layout/popupProject";
+@import "./layout/btnTop";
+@import "./layout/contact";

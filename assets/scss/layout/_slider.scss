@@ -1,0 +1,43 @@
+.slider{
+    @include size(100%, 100vh);
+    position: relative;
+    z-index: $z_slider;
+    background: url("../images/bg-slider.jpeg") no-repeat center center fixed;
+    background-size: cover;
+    &__overlay{
+        @include posi-top-left(absolute, 0, 0);
+        @include size(100%, 100%);
+        z-index: $z_slider__overlay;
+        background: $bg_slider__overlay;
+    }
+    &__btn{
+        @include posi-top-left(absolute, 85%, 50%);
+        transition: .3s all;
+        color: $color_btn-chuyen-section;
+        cursor: pointer;
+        z-index: $z_slider__btn;
+        animation: 1s infinite alternate fadeInUp;
+    }
+    &__caption{
+        @include posi-top-left(absolute, 50%, 50%);
+        z-index: $z_slider__caption;
+        transform : translate(-50%,-50%);
+        h1{
+            @include model(0 20px, 0);
+            font-family: monts-reg;
+            font-size: 190%;
+            color: $main-color;
+            text-shadow: 0 0 40px $main-color;
+        }
+        h3{
+            color: $text-color;
+            font-family: monts-reg;
+            margin-top: 20px;
+            font-size: 90%;
+            letter-spacing: 2px;
+        }
+        span{
+            margin: 0 10px;
+        }
+    }
+}

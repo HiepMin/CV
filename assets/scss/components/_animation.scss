@@ -1,0 +1,14 @@
+.one-block-project.hidden{
+	@include size(0 !important,0 !important);
+	transform-origin: 50% 50%;
+	transform: scale(0);
+}
+.sohienra{
+	-webkit-animation: sohienlen 1s forwards;
+	animation: sohienlen 1s forwards;
+	 -webkit-animation-delay: 1s; 
+	 animation-delay: 1s
+}
+@-webkit-keyframes sohienlen{
+  from{}
+  to {-webkit-transform: scale(1);transform: scale(1);}}

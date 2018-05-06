@@ -1,0 +1,50 @@
+.skill {
+    .progressBar {
+        @include size(90%, 15px);
+        box-shadow: 0 1px 3px #333;
+        margin: 5.5rem auto;
+        border-radius: 11px;
+        background: #bbb;
+        position: relative;
+      
+        .title-icon {
+            @include flex(flex-start, center, row, nowrap);
+            @include posi-top-left(absolute, -206%, 3%);
+            transform : translateY(-50%);
+            z-index: 1;
+            font-size: 2.5rem;
+            span {
+                font-size: 15px;
+                margin-left: 5px;
+                color: $text-color;
+                font-family: monts-reg;
+            }
+        }
+         .progress_value {
+            @include posi-top-right(absolute, -205%, 12px);
+            letter-spacing: 1px;
+            color: $text-color;
+            
+        }
+        .progress {
+            @include posi-top-left(absolute, 50%, 3px);
+            @include size(0, 70%);
+            transition: 1s;
+            transform : (translateY(-50%));
+            z-index: 3;
+            border-radius: 11px; 
+            background: $bg-progress;
+        }
+        &:nth-child(3n){
+            margin-bottom: 1rem;
+        }
+    }
+}
+@for $n from 1 to 7{
+    .progress-#{$n}{
+        transition-delay: .3s * $n !important;
+    }
+}
+
+
+

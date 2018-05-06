@@ -1,0 +1,19 @@
+.btn--top {
+    position: fixed;
+    bottom: 30px;
+    right: -50px;
+    z-index: $z_to-top;
+    @include size(40px, 40px);
+    @include flex(center, center, row, nowrap);
+    transition: .2s all;
+    background: $main-color;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid $main-color;
+
+    &:hover{
+        background: transparent;
+        color: $main-color;
+    }
+}
+.dira{right: 40px;}

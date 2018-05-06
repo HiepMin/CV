@@ -1,0 +1,46 @@
+.big-title {
+    @include flex(center, center, row, no-wrap);
+    @include model(2rem 2.5rem, 2rem auto);
+    box-shadow: 0 2px 7px 4px rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
+    color: $text-color;
+    width: 50%;
+    border-bottom: 3px solid #F77A05;
+	font-family: lato-thin;
+    background: $bg-block-title;
+    @include mobile{
+		padding: 10px;
+		width: 60%;
+		h4{
+			font-size: 2rem !important;
+		}
+	}
+}
+.small-title{
+    @include model(1rem 0, 1rem 0);
+    color: $text-color;
+
+    overflow: hidden;
+    font-size: 90%;
+    width: 95%;
+    p{  
+        margin-bottom: .5rem !important;
+    }
+    .gach {
+        @include size(45%, 2rem);
+        transform : (skew(-32deg, 0) translateX(-10px));
+        box-shadow: 4px 4px 9px 0px #00000082;
+        background: $text-color;
+        display: inline-block;
+        margin-right: 2rem;
+        @include mobile{
+            width: 40%;
+        }
+    }
+    .text {
+        font-size: 200%;
+        font-family: lato-reg;
+        @include mobile{
+            font-size: 140%;
+        }
+    }
+}
